@@ -43,10 +43,11 @@ namespace Gemini.Modules.Shell.Views
 	        }
 	    }
 
-        public void HideAutoHideWindow()
+        public void HideAutoHideWindow(ILayoutItem activeLayoutItem)
         {
             var window = Manager.AutoHideWindow;
-            if (window != null)
+            if (window != null && 
+                ((ShellViewModel)window.DataContext).ActiveLayoutItem != activeLayoutItem)
             {
                 window.Visibility = Visibility.Hidden;
             }

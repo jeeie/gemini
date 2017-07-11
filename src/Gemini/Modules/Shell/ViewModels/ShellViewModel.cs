@@ -69,14 +69,15 @@ namespace Gemini.Modules.Shell.ViewModels
 	            if (ReferenceEquals(_activeLayoutItem, value))
 	                return;
 
-	            _activeLayoutItem = value;
+                _shellView?.HideAutoHideWindow(value);
+
+                _activeLayoutItem = value;
 
 	            if (value is IDocument)
 	                ActivateItem((IDocument) value);
 
 	            NotifyOfPropertyChange(() => ActiveLayoutItem);
 
-                _shellView?.HideAutoHideWindow();
 	        }
 	    }
 

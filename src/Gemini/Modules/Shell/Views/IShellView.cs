@@ -14,6 +14,6 @@ namespace Gemini.Modules.Shell.Views
 
         void UpdateFloatingWindows();
 
-        void HideAutoHideWindow();
+        void HideAutoHideWindow(ILayoutItem activeLayoutItem);
     }
 }
