@@ -42,5 +42,14 @@ namespace Gemini.Modules.Shell.Views
 	            window.ShowInTaskbar = showFloatingWindowsInTaskbar;
 	        }
 	    }
-	}
+
+        public void HideAutoHideWindow()
+        {
+            var window = Manager.AutoHideWindow;
+            if (window != null)
+            {
+                window.Visibility = Visibility.Hidden;
+            }
+        }
+    }
 }
