@@ -75,6 +75,8 @@ namespace Gemini.Modules.Shell.ViewModels
 	                ActivateItem((IDocument) value);
 
 	            NotifyOfPropertyChange(() => ActiveLayoutItem);
+
+                _shellView?.HideAutoHideWindow();
 	        }
 	    }
 
